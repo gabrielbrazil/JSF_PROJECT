@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+     <h:head>
+      	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8 "/>
+      	<title>Product Form</title>
+      	<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+      	<h:outputScript library="js" name="maskMoney.js"></h:outputScript>
+      	<h:outputScript library="js" name="product.js"></h:outputScript>
+      </h:head>
+
+   <h:body>
+		<h:form id="formProduct">
+		 <p:panel header="Form Product" style="width:635px;">
+		   <p:messages/>
+		 	<p:panelGrid columns="2" style="width:600px;">
+				<h:outputLabel  for="name" value="Name"/>
+				<p:inputText id="name" label="name" value="#{productBean.product.name}" required="true"/>
+				<h:outputLabel  for="description" value="description"/>
+				<p:inputText id="description" label="description" value="#{productBean.product.description}" required="true"/>
+				<h:outputLabel  for="price" value="Price"/>
+				<p:inputText id="price" label="price" value="#{productBean.product.price}" maxlength="13" required="true" >
+					<f:validator binding="#{priceValidator}"/>
+					<f:converter converterId="priceConverter"/>
+				</p:inputText>
+				<p:commandButton action="#{productBean.salvar}" value="save" ajax="false" validateClient="true"/>
+			</p:panelGrid>	
+		 </p:panel>	
+		</h:form>
+	</h:body>
+
+</html>
