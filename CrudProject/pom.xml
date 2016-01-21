@@ -14,9 +14,7 @@
 	</properties>
 
 	<dependencies>
-
 		<!--hibernate -->
-
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
@@ -28,13 +26,25 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.15</version>
 		</dependency>
-
-
-
 		<!-- end hibernate -->
 
-		<!-- spring -->
+		<!--JSR 303 with Hibernate Validator -->
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.0.0.GA</version>
+		</dependency>
 
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>4.1.0.Final</version>
+		</dependency>
+
+		<!-- end JSR 303 with Hibernate Validator -->
+
+		<!-- spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -65,7 +75,6 @@
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
@@ -92,9 +101,9 @@
 			<artifactId>spring-web</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
+		<!-- end spring -->
 
 		<!-- Spring Security -->
-
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-core</artifactId>
@@ -124,9 +133,9 @@
 			<artifactId>facelets-taglib-jsf20-spring-3</artifactId>
 			<version>0.5</version>
 		</dependency>
+		<!-- end Spring Security -->
 
 
-		<!-- end spring -->
 		<!-- jsf -->
 		<dependency>
 			<groupId>com.sun.faces</groupId>
@@ -168,22 +177,14 @@
 
 		<dependency>
 			<groupId>org.primefaces.themes</groupId>
-			<artifactId>ui-lightness</artifactId>
+			<artifactId>hot-sneaks</artifactId>
 			<version>1.0.10</version>
 		</dependency>
 
-	<dependency>
-		<groupId>org.primefaces.extensions</groupId>
-		<artifactId>primefaces-extensions</artifactId>
-		<version>3.2.0</version>
-	</dependency>
-		
-
-
 		<!-- end PrimeFaces -->
 
-		<!-- outros -->
 
+		<!-- outros -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
@@ -207,8 +208,6 @@
 			<artifactId>jta</artifactId>
 			<version>1.1</version>
 		</dependency>
-
-
 		<!-- end outros -->
 
 	</dependencies>
