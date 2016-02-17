@@ -1,17 +1,17 @@
 package com.java.gabriel.controller;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
-import javax.faces.bean.RequestScoped;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
 
 import com.java.gabriel.model.Product;
 import com.java.gabriel.service.ProductService;
 
-@ManagedBean(name="productBean")
-@RequestScoped
+@Controller
+@Scope("request")
 public class ProductBean {
 	
-	@ManagedProperty("#{productService}")
+	@Autowired
 	private ProductService productService;
 	
 	private Product product;
